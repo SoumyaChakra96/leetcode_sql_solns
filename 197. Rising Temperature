@@ -1,0 +1,9 @@
+select w1.id
+from weather w1, weather w2
+where datediff(w1.recordDate, w2.recordDate) = 1
+and w2.temperature  < w1.temperature;
+
+# we have to join the table with itself only (self join) and dente 1st occurance as w1 and the second occurance as w2, 
+then we have to filter using datediff function to compare if two dates are consecutive dates i.e equal to 1,
+and then we have to comapare if temperature of a particular date is greater than it's previous date or not i(we have to check it for all the dates),
+and finally return the w1.
