@@ -1,0 +1,7 @@
+select tweet_id
+from tweets
+where length(content) > 15
+order by tweet_id
+
+# length() function returns us the no. of characters in a string. Note that it will also consider the leading spaces i.e. space before the start of a sentence in the string 
+but, not the trailing spaces i.e. space after the end of a sentence in them.
